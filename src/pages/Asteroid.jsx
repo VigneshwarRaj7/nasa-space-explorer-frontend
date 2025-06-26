@@ -21,7 +21,7 @@ export default function Asteroid() {
 
   //API call for retrieving information about the asteroids from a particular date range. 
   useEffect(() => {
-    fetch(`http://localhost:5050/api/asteroids/start-date/${start}/end-date/${end}`)
+    fetch(`https://nasa-space-explorer-backend-git-main-vigneshwarraj7s-projects.vercel.app/api/asteroids/start-date/${start}/end-date/${end}`)
       .then(res => res.json())
       .then(data => {
         setAsteroids(data.near_earth_objects);

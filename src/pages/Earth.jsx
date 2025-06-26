@@ -13,7 +13,7 @@ function Earth() {
 
   //API call to retrieve images of Earth from EPIC from NASA Open APIs
   useEffect(() => {
-    fetch(`http://localhost:5050/api/earth/date/:${date}`)
+    fetch(`https://nasa-space-explorer-backend-git-main-vigneshwarraj7s-projects.vercel.app/api/earth/date/:${date}`)
       .then((res) => res.json())
       .then((data) => {
         setImages(data);

@@ -18,7 +18,7 @@ function Apod() {
   
     const fetchApod = async () => {
       const response = await fetch(
-        "http://localhost:5050/api/apod"
+        "https://nasa-space-explorer-backend-git-main-vigneshwarraj7s-projects.vercel.app/api/apod"
     );
     const json = await response.json();
     console.log(json);

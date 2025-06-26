@@ -19,7 +19,7 @@ export default function Mars() {
 
  // Api call responsible for retrieving information related to the rover
   useEffect(() => {
-    fetch(`http://localhost:5050/api/mars-rover-manifests/${rover}`)
+    fetch(`https://nasa-space-explorer-backend-git-main-vigneshwarraj7s-projects.vercel.app/api/mars-rover-manifests/${rover}`)
       .then((res) => res.json())
       .then((data) => {
         setManifest(data.photo_manifest);
@@ -35,7 +35,7 @@ export default function Mars() {
   // doesn't seem to work.
   useEffect(() => {
     if (!selectedSol) return;
-    fetch(`http://localhost:5050/api/mars-rover-photos/rover-name/${rover}/sol/${selectedSol}`)
+    fetch(`https://nasa-space-explorer-backend-git-main-vigneshwarraj7s-projects.vercel.app/api/mars-rover-photos/rover-name/${rover}/sol/${selectedSol}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data.photos);

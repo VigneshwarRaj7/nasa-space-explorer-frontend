@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-techno:'Silkscreen', 'sans-serif';
+  --font-press:'Press Start 2P', 'sans-serif';  
+  --font-orbitron:'Orbitron', 'sans-serif';
+}
+
+@layer utilities {
+  .bg-stars {
+    background-image: url('./assets/starsBG5.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-30px); }
+  }
+
+  .animate-float {
+    animation: float 3.5s ease-in-out infinite;
+  }
+
+  /* 3D perspective */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* Glow effect */
+  .glow-effect {
+    box-shadow: 0 4px 30px 0 rgba(139, 92, 246, 0.7);
+    transition: box-shadow 0.3s;
+  }
+
+
+/* Global scrollbar styles */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 4px
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6C01B7; /* Tailwind gray-500 */
+  border-radius: 5px;
+}
+
+/* Custom elements (outside @layer block) */
+#box {
+  display: inline-block;
+  padding: 7px;
+  box-shadow: 9px 14px 10px #6C01B7;
+}
+
+#btn {
+  display: inline-block;
+  background-color: #0E172B;
+  padding: 7px;
+  box-shadow: 7px 10px 1px #888888;
+}
+
+#btn-mini {
+  display: inline-block;
+  background-color: #8200DA;
+  padding: 5px;
+  box-shadow: 4px 6px 3px #6C01B7;
+}
+
+#card-red {
+  box-shadow: 4px 6px 10px #F60004;
+}
+
+#card-green {
+  box-shadow: 4px 6px 10px #01FF00;
+}
+
+#card-purple {
+  box-shadow: 4px 6px 50px #6C01B7;
+}

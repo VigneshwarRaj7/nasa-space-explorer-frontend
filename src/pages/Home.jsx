@@ -19,20 +19,20 @@ function Home() {
   const asteroidControls = useAnimation();
 
 
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [started, setStarted] = useState(true);
   const [hoveredItem, setHoveredItem] = useState(null);
 
-  const [showWelcomeText, setShowWelcomeText] = useState(true);
+  // const [showWelcomeText, setShowWelcomeText] = useState(true);
 
   //This useEffect is used to show the Welcome Text for 6 seconds.
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setShowWelcomeText(false);
-      }, 6000); 
+    // useEffect(() => {
+    //   const timer = setTimeout(() => {
+    //     setShowWelcomeText(false);
+    //   }, 6000); 
 
-      return () => clearTimeout(timer); 
-    }, []);
+    //   return () => clearTimeout(timer); 
+    // }, []);
 
     // Below are animation specifications defining the final points and state for each component in the Home page. 
   const shipAnimation = {
@@ -142,13 +142,13 @@ function Home() {
   return (
     <div className="bg-stars h-screen text-green-500 relative">
       
-      {showWelcomeText && (
+      {/* {showWelcomeText && (
       <div id='card-purple' className="absolute  text-center font-extrabold font-orbitron items-center text-xl text-white backdrop-blur-xs bg-opacity-50 px-4 py-2 rounded-md  left-1/2 transform -translate-x-1/2 z-50">
         🚀 Welcome to the Space Explorer! Rick & Morty are prepping the ship...
            Best viewed in "horizontal orientation" for phones...                       
             
       </div>
-    )}
+    )} */}
       {/* Hover Dialogue near the ship */}
       <div className="absolute top-32 left-10 z-50">
         <HoverDialogue
